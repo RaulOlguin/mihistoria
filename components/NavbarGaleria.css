@@ -1,0 +1,12 @@
+.NavbarGaleria{
+    display: flex;
+    justify-content: center;
+    gap:0.5rem;
+    font-size: 1em;
+
+}
+.NavbarGaleria li{
+    background-color: goldenrod;
+    padding: 1em 2em;
+    border-radius: 5px;
+}

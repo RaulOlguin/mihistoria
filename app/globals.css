@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+body {
+  background-image: url("@/public/fondo.jpg");
+  font-family: 'Castoro', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.titulo{
+  text-align: center;
+  background-image: url("@/public/img/muelle_prat.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 40rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.titulo h1{
+  padding: 0.2em;
+  font-size: 4rem;
+  color: #555;
+  text-decoration: underline;
+  letter-spacing: 1.2rem;
+  -webkit-text-stroke: #000 2px;
+}
+
+.titulo h2{
+  padding: 0em;
+  font-size: 2rem;
+  color: #555;
+  -webkit-text-stroke: #000 2px;
+}
+
+
+.cuota{
+  display: flexbox;
+  font-size: 1.3em;
+  margin: 5em auto; 
+  padding:5em;
+  min-width: 30%;
+  max-width:60%;
+  background-color: whitesmoke;
+  text-align: center;
+  font-style: italic;
+}
+
+.contenido{
+  display: flexbox;
+  text-align: center;
+  margin:2em auto;
+  padding: 5em 2em;
+  background-color: rgba(240, 240, 240, 0.9);
+  min-width:30%;
+  max-width:80%;
+}
+
+.contenido .imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em auto;
+  
+}
+
+.contenido .imagen img {
+  border:#555 solid 1px;
+  padding:1em;
+  
+}
+
+.contenido .texto{
+  margin: 3em;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: white;
+  display: flex;
+  padding: 1em 5em;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+footer {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 5em;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+footer .datos {
+  display: flexbox;
+  align-items:flex-start;
+}
+
+footer .logo {
+  display: flex;
+  align-items: center;
+  min-width: 50px;
+  max-width: 200px;
+}
+
+
+
+
+.targeta{
+  display:flex;
+  margin: 1em auto;
+  background-color: rgba(255,255,255,0.8);
+  min-width: 30%;
+  max-width: 80%;
+}
+
+.targeta2{
+  display:flex;
+  justify-content: space-between;
+  margin: 1em auto;
+  background-color: rgba(255,255,255,0.8);
+  min-width: 30%;
+  max-width: 80%;
+}
+
+ .descripcion{
+  display: flexbox;
+  padding:2em;
+
+}
+
+ .descripcion h3{
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.contenido .Galeria{
+  max-width: 800px;
+  min-width: 200px;
+  margin:2em auto;
+  
+}
+
+.contenido .Galeria h2{
+  font-size: 2em;
+  font-weight: bold;
+}
