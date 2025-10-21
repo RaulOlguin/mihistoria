@@ -2,7 +2,7 @@ import './globals.css';
 
 import "./globals.css"
 
-import "../components/navbar.css"
+import "../components/Navbar.css"
 
 import Navbar from "../components/Navbar";
 import Image from "next/image";
