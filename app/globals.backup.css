@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+
+@layer base {
+  body {
+    font-size: 1rem; /* equivalente a text-base en Tailwind */
+    background-image: url("/fondo.jpg");
+    font-family: 'Castoro', Arial, Helvetica, sans-serif;
+  }
+}
+
+
+@layer components {
+ 
+  .titulo {
+    @apply text-center bg-cover bg-bottom bg-no-repeat w-screen min-h-[40rem] ml-[calc(50%-50vw)];
+    background-image: url("/img/muelle_prat.jpg");
+  }
+
+  .titulo h1 {
+    @apply p-1 text-[4rem] text-gray-600 underline tracking-[1.2rem];
+    -webkit-text-stroke: #000 2px;
+  }
+
+  .titulo h2 {
+    @apply text-[2rem] text-gray-600;
+    -webkit-text-stroke: #000 2px;
+  }
+
+  .cuota {
+    @apply text-[1.3em] my-20 mx-auto p-20 min-w-[30%] max-w-[60%] bg-[whitesmoke] text-center italic;
+  }
+
+  .contenido {
+    @apply text-center mx-auto my-8 px-8 py-20 bg-[rgba(240,240,240,0.9)] min-w-[30%] max-w-[80%];
+  }
+
+  .contenido .imagen {
+    @apply flex justify-center items-center mx-auto my-8;
+  }
+
+  .contenido .imagen img {
+    @apply border border-gray-600 p-4;
+  }
+
+  .contenido .texto {
+    @apply m-12 text-center text-[1.3em] leading-[1.3em] rounded-lg;
+  }
+
+  footer {
+    @apply bg-white flex justify-between items-center py-4 px-20 relative w-screen z-[100];
+  }
+
+  footer .datos {
+    @apply flex;
+  }
+
+  footer .logo {
+    @apply flex items-center min-w-[50px] max-w-[200px];
+  }
+
+  .targeta {
+    @apply flex mx-auto my-4 bg-[rgba(255,255,255,0.8)] min-w-[30%] max-w-[80%];
+  }
+
+  .targeta2 {
+    @apply flex justify-between mx-auto my-4 bg-[rgba(255,255,255,0.8)] min-w-[30%] max-w-[80%];
+  }
+
+  .descripcion {
+    @apply p-8;
+  }
+
+  .descripcion h3 {
+    @apply text-[2em] font-bold mb-2;
+  }
+
+  .contenido .Galeria {
+    @apply mx-auto my-8 max-w-[800px] min-w-[200px];
+  }
+
+  .contenido .Galeria h2 {
+    @apply text-[2em] font-bold;
+  }
+}

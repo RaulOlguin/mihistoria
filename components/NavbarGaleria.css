@@ -1,12 +1,64 @@
-.NavbarGaleria{
-    display: flex;
-    justify-content: center;
-    gap:0.5rem;
-    font-size: 1em;
-
+.navbar-galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
 }
-.NavbarGaleria li{
-    background-color: goldenrod;
-    padding: 1em 2em;
-    border-radius: 5px;
+
+.banner-item-premium {
+  position: relative;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.banner-item-premium::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.4s ease, background 0.4s ease;
+  z-index: 1;
+}
+
+.banner-item-premium:hover::after {
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.banner-item-premium:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.25);
+}
+
+.banner-overlay-premium {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.banner-item-premium:hover .banner-overlay-premium {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.banner-title-premium {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
