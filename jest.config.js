@@ -2,6 +2,7 @@ const nextJest = require("next/jest");
 
 const createJestConfig = nextJest({
   dir: "./", // ruta del proyecto
+  
 });
 
 const customJestConfig = {
@@ -16,6 +17,7 @@ const customJestConfig = {
     "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
   
   },
+  
 };
 
 module.exports = createJestConfig(customJestConfig);

@@ -1,5 +1,5 @@
 import {render, screen } from "@testing-library/react"
-import RootLayout from "../app/layout"
+import RootLayout from "@/app/layout"
 
 jest.mock("next/image", ()=> (props)=> {
     return<img{...props}/>;

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import NotFoundPage from "../app/not-found"; // ajusta ruta
+import NotFoundPage from "@/app/not-found"; // ajusta ruta
 
 describe("Página 404 - NotFoundPage", () => {
   beforeEach(() => {
