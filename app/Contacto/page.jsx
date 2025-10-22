@@ -7,7 +7,7 @@ function ContactoPage() {
             </div>
             <div className="contenido">
                 <h2 style={{marginBottom: '1em', color: '#111'}}>Contacto</h2>
-                <form className="contact-form" style={{color: '#111'}}>
+                <form className="contact-form" style={{color: '#111'}} aria-label="Formulario de contacto">
                     <div style={{marginBottom: '1.5em'}}>
                         <input type="text" name="nombre" placeholder="Nombre" required style={{width: '80%', padding: '0.7em', borderRadius: '6px', border: '1px solid #aaa', fontFamily: 'inherit', fontSize: '1em', color: '#111'}} />
                     </div>
