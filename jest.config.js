@@ -14,11 +14,13 @@ const customJestConfig = {
     "^app/(.*)$": "<rootDir>/app/$1",
   },
   
+  preset: "next/jest",
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
-  
+    "^.+\\.(js|jsx|ts|tsx)$": ["babel-jest", { configFile: "./jest.babel.config.js" }],
   },
-  
 };
+
+  
+
 
 module.exports = createJestConfig(customJestConfig);
