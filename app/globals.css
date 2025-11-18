@@ -180,3 +180,13 @@ footer {
 
 }
 
+@keyframes pulseShadow {
+  0% { box-shadow: 0 0 0 0 var(--pulse-color, #050000); }
+  70% { box-shadow: 0 0 0 16px var(--pulse-color, #eb080810); }
+  100% { box-shadow: 0 0 0 0 var(--pulse-color, #eb080810); }
+}
+.pulse-custom {
+  animation: pulseShadow var(--duration, 1.5s) infinite;
+}
+
+

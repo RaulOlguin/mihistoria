@@ -1,9 +1,13 @@
 import Image from "next/image";
+import { PulsatingButton } from "@/components/ui/pulsating-button";
 
 export default function Home() {
   return(
     <>
 
+      <PulsatingButton className="fixed top-20 right-4 z-40 bg-red-600 px-6 py-4">
+        Farmacias
+      </PulsatingButton>
     
       <div className="titulo">
         <h1>Mi Historia.cl</h1>
