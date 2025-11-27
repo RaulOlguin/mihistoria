@@ -1,0 +1,91 @@
+
+/* Navbar button-style links with spacing */
+
+ .navbar-global {
+  /* glass background */
+  background: rgba(255,255,255,0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  /* border-bottom removed for flush alignment */
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  box-sizing: border-box;
+  position: fixed; /* fixed to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 55px;
+ }
+/* Removed extra closing brace */
+
+@media (min-width: 768px) {
+  .navbar-global {
+    padding: 0;
+  }
+}
+
+/* container to align nav items with page content and avoid edge clipping */
+.nav-container{
+  width: 100%;
+  padding-left: 1rem; /* ensures left spacing aligns with content */
+  padding-right: 1rem; /* base right spacing */
+  box-sizing: border-box;
+  display: flex;
+  /* nav list will push itself with margin-left:auto */
+}
+
+@media (min-width: 1024px) {
+  /* at large screens give a bit more right inset so last button never hugs the viewport edge */
+  .nav-container {
+    padding-right: 2rem;
+  }
+}
+
+.navList-global {
+  display: flex;
+  gap: 0.5rem; /* reduced gap between buttons */
+  align-items: center;
+  margin-left: auto; /* push the list to the far right of the container */
+  padding-right: 0.5rem; /* small buffer so last item can't touch the container edge */
+  box-sizing: border-box;
+}
+
+/* small safe margin on the last list item to prevent clipping in some browsers */
+.navList-global > li:last-child {
+  margin-right: 0.5rem;
+}
+
+.navItem-global {
+  list-style: none;
+}
+
+.navLink-global {
+  display: inline-block;
+  padding: 0.35rem 0.75rem; /* slightly reduced horizontal padding to better fit tight widths */
+  box-sizing: border-box;
+  white-space: nowrap; /* prevent text wrapping / truncation */
+  background: #ffffff;
+  color: #1f2937; /* text-gray-800 */
+  border-radius: 0.375rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+
+.navLink-global:hover{
+  transform: translateY(-1px);
+  background: #f3f4f6; /* slightly darker */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+}
+
+.navLink-global:focus {
+  outline: 3px solid rgba(59,130,246,0.25); /* accessible focus */
+  outline-offset: 2px;
+}
+
+
+/* Navbar styles removed - using Tailwind utility classes in Navbar.jsx */
