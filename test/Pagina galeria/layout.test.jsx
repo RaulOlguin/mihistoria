@@ -1,7 +1,8 @@
 import { render, screen } from "@testing-library/react";
+import { describe, test, vi } from "vitest";
 import GaleriaPageRoot from "@/app/Galeria/layout";
 
-jest.mock("@/components/NavbarGaleria", () => () => <nav>NavbarGaleria</nav>);
+vi.mock("@/components/NavbarGaleria", () => () => <nav>NavbarGaleria</nav>);
 
 describe("Layout Galería", () => {
   test("renderiza título, navbar y children", () => {

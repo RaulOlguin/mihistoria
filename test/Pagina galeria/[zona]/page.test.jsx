@@ -1,8 +1,9 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { describe, test, beforeEach, vi } from "vitest";
 
 // Mock del componente Next.js Image
-jest.mock("next/image", () => (props) => <img {...props} />);
+vi.mock("next/image", () => (props) => <img {...props} />);
 
 // Importamos nuestro mock de la página
 import Page from "test/mocks/PageZonaMocks";

@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { describe, test, beforeEach, vi } from "vitest";
 import ContactoPage from "../../app/Contacto/page"; // Ajusta la ruta según tu estructura
 
-jest.mock("next/image", () => (props) => <img {...props} alt={props.alt || ""} />);
+vi.mock("next/image", () => (props) => <img {...props} alt={props.alt || ""} />);
 
 describe("Página Contacto - ContactoPage", () => {
   beforeEach(() => {
@@ -29,5 +30,4 @@ describe("Página Contacto - ContactoPage", () => {
     expect(screen.getByPlaceholderText(/Escribe tu mensaje/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Enviar/i })).toBeInTheDocument();
   });
-
 });

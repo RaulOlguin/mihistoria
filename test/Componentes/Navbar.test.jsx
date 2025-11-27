@@ -3,12 +3,12 @@ import "@testing-library/jest-dom";
 import Navbar from "@/components/Navbar";
 
 // Mock de next/link
-jest.mock("next/link", () => {
+vi.mock("next/link", () => {
   return ({ href, children }) => <a href={href}>{children}</a>;
 });
 
 // Mock de lucide-react usando ruta RELATIVA 
-jest.mock("../test/mocks/lucide-react", () => ({
+vi.mock("../test/mocks/lucide-react", () => ({
   Home: (props) => <svg {...props} data-testid="icon-home" />,
   Image: (props) => <svg {...props} data-testid="icon-image" />,
   NotebookPen: (props) => <svg {...props} data-testid="icon-notebook" />,

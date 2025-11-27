@@ -1,12 +1,12 @@
 import { render, screen, within } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { describe, test, beforeEach, vi } from "vitest";
 import SomosPage from "@/app/Somos/page"; // Ajusta según tu alias jsconfig.json
 
 // Mock de next/image
-jest.mock("next/image", () => (props) => <img {...props} alt={props.alt || ""} />);
+vi.mock("next/image", () => (props) => <img {...props} alt={props.alt || ""} />);
 
 describe("Página Somos - Verificación de contenido", () => {
-  
   beforeEach(() => {
     render(<SomosPage />);
   });
@@ -26,5 +26,4 @@ describe("Página Somos - Verificación de contenido", () => {
     const imagenCristopher = screen.getByAltText(/imagen cristopher osses/i);
     expect(imagenCristopher).toBeInTheDocument();
   });
-
 });
