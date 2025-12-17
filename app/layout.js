@@ -7,6 +7,10 @@ import "../components/Navbar.css"
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 
+import { CarritoProvider } from "@/context/CarritoContext"; // Ajusta la ruta si es necesario
+import "./globals.css";
+
+
 export const metadata = {
   title: "miHistoria.cl",
   description: "fotos historicas de valparaiso, turismo, educacion",
@@ -34,9 +38,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${castoro.className} ${inter.variable}`}>
       <body>
+        <CarritoProvider>
           <Navbar/>
           {children}
-        
+        </CarritoProvider>
           <footer>
           <div className="datos">
             <p>Alumnos: Raul Olguin, Cristopher Osses</p>

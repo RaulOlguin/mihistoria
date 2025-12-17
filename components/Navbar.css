@@ -87,5 +87,27 @@
   outline-offset: 2px;
 }
 
+/* Estilos para que el botón del carrito permita posicionar la burbuja */
+.navLink-global.relative {
+  position: relative; /* Necesario para que el hijo absolute se guíe por este padre */
+}
 
-/* Navbar styles removed - using Tailwind utility classes in Navbar.jsx */
+/* La burbuja roja del contador */
+.cart-badge {
+  position: absolute;
+  top: -6px;        /* Sube la burbuja un poco fuera del botón */
+  right: -6px;      /* La mueve a la derecha */
+  background-color: #ef4444; /* Rojo vibrante */
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* La hace redonda */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 10;
+  pointer-events: none; /* Para que el click pase a través de la burbuja */
+}
