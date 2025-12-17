@@ -1,13 +1,16 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { describe, test, beforeEach, vi } from "vitest";
 
 // Mock del componente Next.js Image
-jest.mock("next/image", () => (props) => <img {...props} />);
+vi.mock("next/image", () => ({
+  __esModule: true,
+  default: (props) => <img {...props} alt={props.alt || ""} />,
+}));
 
 // Importamos nuestro mock de la página
 import Page from "test/mocks/PageZonaMocks";
 
-// Describimos la suite de tests
 describe("Página Galería - Zona", () => {
   const params = { zona: "playa" }; // simulamos la zona
 
@@ -48,7 +51,6 @@ describe("Página Galería - Zona", () => {
     const lightbox = screen.getByTestId("lightbox");
     fireEvent.click(lightbox);
 
-    // Verificamos que el lightbox ya no está en el DOM
     expect(screen.queryByTestId("lightbox")).not.toBeInTheDocument();
   });
 });
